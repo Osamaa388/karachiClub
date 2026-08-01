@@ -1,0 +1,455 @@
+/******************************************************************
+  Gym Timing Page CSS
+  Theme tokens (matches Karachi Club GYM site):
+  --men:    #01b1f3  (existing brand blue — reused, not reinvented)
+  --ladies: #ff5da2  (new rose accent — intentional contrast to blue)
+  --closed: #2a2a2a  (muted, striped pattern so it reads without color)
+  --bg-void:  #0a0a0a
+  --bg-panel: #151515
+  Fonts: Oswald (display) + Mulish (body)
+******************************************************************/
+
+.timing-hero,
+.timeline-wrap,
+.schedule-cards {
+    font-family: "Mulish", sans-serif;
+}
+
+.timing-hero h1,
+.schedule-cards h4 {
+    font-family: "Oswald", sans-serif;
+}
+
+/*---------------------
+  Hero
+-----------------------*/
+
+.timing-hero {
+    background: #0a0a0a;
+    padding: 210px 0 60px;
+    text-align: center;
+}
+
+.timing-eyebrow {
+    display: inline-block;
+    font-size: 15px;
+    color: #01b1f3;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+}
+
+.timing-hero h1 {
+    font-size: 48px;
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.timing-hero p {
+    font-size: 15px;
+    color: #c4c4c4;
+    margin-bottom: 0;
+}
+
+/*---------------------
+  Live Status Pill
+-----------------------*/
+
+.timeline-wrap {
+    background: #0a0a0a;
+    padding-bottom: 70px;
+}
+
+.live-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 35px;
+}
+
+.live-dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background: #01b1f3;
+    box-shadow: 0 0 0 0 rgba(1, 177, 243, 0.6);
+    animation: pulse-dot 1.8s infinite;
+}
+
+@keyframes pulse-dot {
+    0% {
+        box-shadow: 0 0 0 0 rgba(1, 177, 243, 0.55);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(1, 177, 243, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(1, 177, 243, 0);
+    }
+}
+
+#liveStatusText {
+    font-size: 15px;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/*---------------------
+  Day Bar (Signature Element)
+-----------------------*/
+
+.day-bar {
+    position: relative;
+    height: 64px;
+    width: 100%;
+    margin-top: 34px;
+}
+
+.day-bar-track {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 6px;
+    background: #151515;
+    border: 1px solid #262626;
+}
+
+.seg {
+    height: 100%;
+    width: 0;
+    animation: grow-seg 1s ease forwards;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seg::after {
+    content: attr(data-label);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+    opacity: 0;
+    animation: fade-label 0.4s ease forwards;
+    animation-delay: 1s;
+    white-space: nowrap;
+}
+
+.seg-men {
+    background: #01b1f3;
+}
+
+.seg-ladies {
+    background: #ff5da2;
+}
+
+.seg-closed {
+    background: repeating-linear-gradient(
+        135deg,
+        #2a2a2a,
+        #2a2a2a 6px,
+        #212121 6px,
+        #212121 12px
+    );
+}
+
+.seg-closed::after {
+    color: #8a8a8a;
+}
+
+@keyframes grow-seg {
+    from { width: 0; }
+    to { width: var(--w); }
+}
+
+.seg:nth-child(1) { animation-delay: 0s; }
+.seg:nth-child(2) { animation-delay: 0.15s; }
+.seg:nth-child(3) { animation-delay: 0.3s; }
+.seg:nth-child(4) { animation-delay: 0.45s; }
+.seg:nth-child(5) { animation-delay: 0.6s; }
+
+@keyframes fade-label {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Now Marker */
+
+.now-marker {
+    position: absolute;
+    top: -30px;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(-50%);
+    left: 0;
+    opacity: 0;
+    animation: reveal-marker 0.5s ease forwards;
+    animation-delay: 1.3s;
+    z-index: 5;
+}
+
+@keyframes reveal-marker {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.now-flag {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #0a0a0a;
+    background: #ffffff;
+    padding: 3px 9px;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    white-space: nowrap;
+}
+
+.now-dot {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.15);
+    margin-bottom: 4px;
+}
+
+.now-marker::after {
+    content: "";
+    width: 2px;
+    flex: 1;
+    background: #ffffff;
+}
+
+/* Tick labels under the bar */
+
+.day-bar-ticks {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 14px;
+}
+
+.day-bar-ticks span {
+    font-size: 11px;
+    color: #7a7a7a;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.swipe-hint {
+    display: none;
+}
+
+/*---------------------
+  Schedule Cards
+-----------------------*/
+
+.schedule-cards {
+    background: #151515;
+}
+
+.sched-card {
+    background: #0a0a0a;
+    border: 1px solid #262626;
+    border-top: 3px solid #01b1f3;
+    padding: 34px 28px;
+    margin-bottom: 30px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.sched-card.ladies-card {
+    border-top-color: #ff5da2;
+}
+
+.sched-card:hover {
+    transform: translateY(-6px);
+}
+
+.sched-icon {
+    font-size: 30px;
+    color: #01b1f3;
+    margin-bottom: 16px;
+}
+
+.ladies-card .sched-icon {
+    color: #ff5da2;
+}
+
+.sched-tag {
+    display: block;
+    font-size: 12px;
+    color: #7a7a7a;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.sched-card h4 {
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.sched-time {
+    font-size: 16px;
+    color: #01b1f3;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.ladies-card .sched-time {
+    color: #ff5da2;
+}
+
+.sched-desc {
+    font-size: 14px;
+    color: #c4c4c4;
+    line-height: 22px;
+    margin-bottom: 0;
+}
+
+.sched-note {
+    text-align: center;
+    font-size: 13px;
+    color: #7a7a7a;
+    margin: 10px 0 30px;
+}
+
+/*---------------------
+  Timing Mini Section (Home Page)
+-----------------------*/
+
+.timing-mini {
+    background: #0a0a0a;
+    font-family: "Mulish", sans-serif;
+}
+
+.timing-mini-item {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.timing-mini-item .dot {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    margin-bottom: 14px;
+}
+
+.timing-mini-item .dot-men {
+    background: #01b1f3;
+    box-shadow: 0 0 0 5px rgba(1, 177, 243, 0.15);
+}
+
+.timing-mini-item .dot-ladies {
+    background: #ff5da2;
+    box-shadow: 0 0 0 5px rgba(255, 93, 162, 0.15);
+}
+
+.timing-mini-item h5 {
+    font-family: "Oswald", sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.timing-mini-item p {
+    font-size: 14px;
+    color: #c4c4c4;
+    margin-bottom: 0;
+}
+
+.timing-mini .text-center {
+    margin-top: 15px;
+}
+
+/*---------------------
+  Reduced Motion
+-----------------------*/
+
+@media (prefers-reduced-motion: reduce) {
+    .seg,
+    .now-marker,
+    .live-dot {
+        animation: none !important;
+    }
+    .seg {
+        width: var(--w);
+    }
+    .seg::after {
+        opacity: 1;
+    }
+    .now-marker {
+        opacity: 1;
+    }
+}
+
+/*---------------------
+  Responsive
+-----------------------*/
+
+@media only screen and (max-width: 767px) {
+    .timing-hero {
+        padding: 160px 0 50px;
+    }
+
+    .timing-hero h1 {
+        font-size: 32px;
+    }
+
+    .day-bar-scroll {
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 6px;
+    }
+
+    .day-bar-scroll::-webkit-scrollbar {
+        height: 4px;
+    }
+
+    .day-bar-scroll::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: 4px;
+    }
+
+    .day-bar,
+    .day-bar-ticks {
+        min-width: 640px;
+    }
+
+    .seg::after {
+        font-size: 11px;
+    }
+
+    .day-bar-ticks span {
+        font-size: 10px;
+    }
+
+    .swipe-hint {
+        display: block;
+        text-align: center;
+        font-size: 12px;
+        color: #01b1f3;
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+}
