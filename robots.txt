@@ -1,0 +1,4 @@
+User-agent: *
+   Allow: /
+
+   Sitemap: https://karachi-club-mauve.vercel.app/sitemap.xml
