@@ -1,0 +1,15 @@
+{
+  "name": "karachi-club",
+  "version": "1.0.0",
+  "description": "Best Gym in Karachi - Karachi Club GYM Nazimabad",
+  "private": true,
+  "scripts": {
+    "test": "echo \"No tests specified\""
+  },
+  "keywords": ["gym", "fitness", "karachi"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/analytics": "^1.4.1"
+  }
+}
