@@ -4421,3 +4421,57 @@ ol {
     }
 }
 
+/* =====================================================
+   FOOTER LOGO - FINAL
+===================================================== */
+
+.fs-about .fa-logo {
+    margin-bottom: 30px;
+}
+
+.fs-about .fa-logo img {
+    width: auto;
+    max-width: 100%;
+    height: 100px;      /* Desktop */
+    display: block;
+}
+
+/* Tablet */
+@media only screen and (max-width: 991px) {
+    .fs-about {
+        text-align: center;
+    }
+
+    .fs-about .fa-logo img {
+        height: 130px;
+        margin: 0 auto;
+    }
+
+    .fs-about p,
+    .fs-about .fa-social {
+        text-align: center;
+    }
+}
+
+/* Mobile */
+@media only screen and (max-width: 767px) {
+    .fs-about .fa-logo img {
+        height: 80px;
+        margin: 0 auto;
+    }
+
+    .fs-about p {
+        font-size: 15px;
+        line-height: 30px;
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    .fs-about .fa-social {
+        text-align: center;
+    }
+
+    .fs-about .fa-social a {
+        margin: 0 8px;
+    }
+}
