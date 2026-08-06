@@ -4370,3 +4370,54 @@ ol {
 }
 
 }
+
+/******************************************************************
+  Logo Size Fix
+  The new logo image is much taller than the old one (icon +
+  big stacked text), so without a height limit it renders at
+  full size and overlaps the hero content below it, especially
+  on mobile. This forces a consistent, controlled size.
+******************************************************************/
+
+.logo img {
+    max-height: 90px;
+    width: auto;
+    display: block;
+}
+
+@media only screen and (max-width: 991px) {
+    .logo img {
+        max-height: 65px;
+    }
+
+    /* Re-align hamburger with the resized logo at tablet width */
+    .canvas-open {
+        top: 38px !important;
+        right: 30px !important;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .logo img {
+        max-height: 50px;
+    }
+
+    .header-section {
+        padding-top: 32px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* Re-align hamburger menu with the new smaller logo —
+       previously tuned for the old, much taller logo */
+    .canvas-open {
+        top: 40px !important;
+        right: 20px !important;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .logo img {
+        max-height: 42px;
+    }
+}
