@@ -1361,67 +1361,524 @@ ol {
 	display: none;
 }
 
-/*---------------------
-  Testimonial Section
------------------------*/
+/* =========================================================
+   KARACHI CLUB GYM - TESTIMONIAL SECTION
+========================================================= */
 
 .testimonial-section {
-	background: #151515;
+    background: #151515;
+    padding: 90px 0 85px;
+    overflow: hidden;
 }
 
-.ts_slider.owl-carousel .owl-item img {
-	display: inline-block;
+
+/* =========================
+   HEADING
+========================= */
+
+.testimonial-heading {
+    margin-bottom: 65px;
 }
 
-.ts_slider.owl-carousel .owl-nav button {
-	height: 46px;
-	width: 46px;
-	color: #a9a9a9;
-	background: rgba(255, 255, 255, 0.1);
-	line-height: 46px;
-	text-align: center;
-	font-size: 24px;
-	position: absolute;
-	left: 30px;
-	top: 50%;
-	-webkit-transform: translateY(-23px);
-	-ms-transform: translateY(-23px);
-	transform: translateY(-23px);
+.testimonial-heading span {
+    display: block;
+    color: #00aeef;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
 }
 
-.ts_slider.owl-carousel .owl-nav button.owl-next {
-	left: auto;
-	right: 30px;
+.testimonial-heading h2 {
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0;
+    text-transform: uppercase;
 }
 
-.ts_slider .ts_item .ti_pic {
-	margin-bottom: 32px;
+
+/* =========================
+   CAROUSEL
+========================= */
+
+.testimonial-carousel {
+    position: relative;
+    width: 100%;
 }
 
-.ts_slider .ts_item .ti_pic img {
-	height: 200px;
-	width: 200px;
-	border-radius: 50%;
+.testimonial-carousel .owl-stage {
+    display: flex;
+    align-items: stretch;
 }
 
-.ts_slider .ts_item .ti_text p {
-	color: #fefefe;
-	letter-spacing: 1px;
-	margin-bottom: 20px;
+.testimonial-carousel .owl-item {
+    display: flex;
+    height: auto;
 }
 
-.ts_slider .ts_item .ti_text h5 {
-	color: #ffffff;
-	font-weight: 600;
-	text-transform: uppercase;
-	margin-bottom: 8px;
+.testimonial-item {
+    width: 100%;
+    display: flex;
+    padding: 15px;
 }
 
-.ts_slider .ts_item .ti_text .tt-rating i {
-	font-size: 12px;
-	color: #d49d09;
+
+/* =========================
+   CARD
+========================= */
+
+.testimonial-card {
+    width: 100%;
+    min-height: 650px;
+
+    background: #181818;
+
+    border: 1px solid #292929;
+    border-radius: 22px;
+
+    padding: 55px 40px 42px;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+
+    transition: all 0.3s ease;
 }
 
+.testimonial-card:hover {
+    border-color: #00aeef;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 174, 239, 0.10);
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.testimonial-img {
+    width: 170px;
+    height: 170px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    border: 4px solid #00aeef;
+
+    margin: 0 auto 32px;
+
+    flex-shrink: 0;
+
+    background: #151515;
+}
+
+.testimonial-img img {
+    width: 100% !important;
+    height: 100% !important;
+
+    display: block !important;
+
+    object-fit: cover !important;
+    object-position: center !important;
+
+    border-radius: 50% !important;
+}
+
+
+/* =========================
+   QUOTE
+========================= */
+
+.testimonial-quote {
+    color: #00aeef;
+
+    font-size: 48px;
+    font-weight: 900;
+
+    line-height: 35px;
+
+    height: 40px;
+
+    margin-bottom: 12px;
+}
+
+
+/* =========================
+   STARS
+========================= */
+
+.testimonial-stars {
+    display: flex !important;
+
+    justify-content: center !important;
+    align-items: center !important;
+
+    gap: 5px !important;
+
+    width: 100% !important;
+
+    margin-bottom: 25px !important;
+}
+
+.testimonial-stars span {
+    display: inline-block !important;
+
+    color: #ffc107 !important;
+
+    font-family: Arial, sans-serif !important;
+
+    font-size: 19px !important;
+
+    line-height: 1 !important;
+
+    opacity: 1 !important;
+
+    visibility: visible !important;
+}
+
+
+/* =========================
+   REVIEW TEXT
+========================= */
+
+.testimonial-card p {
+    color: #d0d0d0;
+
+    font-size: 17px;
+
+    line-height: 1.75;
+
+    margin: 0 auto;
+
+    max-width: 430px;
+
+    flex-grow: 1;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: center;
+}
+
+
+/* =========================
+   NAME
+========================= */
+
+.testimonial-card h4 {
+    color: #ffffff;
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    margin: 30px 0 8px;
+
+    text-transform: none;
+}
+
+
+/* =========================
+   MEMBER LABEL
+========================= */
+
+.testimonial-card .member-label {
+    color: #00aeef;
+
+    font-size: 16px;
+
+    font-weight: 500;
+
+    display: block;
+}
+
+
+/* =========================
+   CAROUSEL ARROWS
+========================= */
+
+.testimonial-carousel .owl-nav {
+    margin: 0;
+}
+
+.testimonial-carousel .owl-nav button {
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 52px;
+    height: 52px;
+
+    border-radius: 50% !important;
+
+    background: #202020 !important;
+
+    border: 1px solid #333 !important;
+
+    color: #ffffff !important;
+
+    font-size: 25px !important;
+
+    display: flex !important;
+
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.3s ease;
+}
+
+.testimonial-carousel .owl-nav button:hover {
+    background: #00aeef !important;
+    border-color: #00aeef !important;
+    color: #ffffff !important;
+}
+
+.testimonial-carousel .owl-nav .owl-prev {
+    left: -25px;
+}
+
+.testimonial-carousel .owl-nav .owl-next {
+    right: -25px;
+}
+
+
+/* =========================
+   DOTS
+========================= */
+
+.testimonial-carousel .owl-dots {
+    text-align: center;
+
+    margin-top: 35px;
+}
+
+.testimonial-carousel .owl-dot {
+    width: 9px;
+    height: 9px;
+
+    background: #555 !important;
+
+    border-radius: 50%;
+
+    margin: 0 5px;
+
+    display: inline-block;
+}
+
+.testimonial-carousel .owl-dot.active {
+    width: 28px;
+
+    border-radius: 20px;
+
+    background: #00aeef !important;
+}
+
+
+/* =========================
+   GOOGLE REVIEWS BUTTON
+========================= */
+
+.testimonial-google-review {
+    text-align: center;
+
+    margin-top: 45px;
+}
+
+.testimonial-google-review a {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 12px 24px;
+
+    border: 1px solid #00aeef;
+
+    border-radius: 30px;
+
+    color: #ffffff !important;
+
+    background: transparent;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    text-decoration: none !important;
+
+    transition: all 0.3s ease;
+}
+
+.testimonial-google-review a:hover {
+    background: #00aeef;
+
+    color: #ffffff !important;
+
+    transform: translateY(-2px);
+}
+
+.google-g {
+    font-size: 20px;
+
+    font-weight: 800;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media only screen and (max-width: 991px) {
+
+    .testimonial-section {
+        padding: 75px 0;
+    }
+
+    .testimonial-heading {
+        margin-bottom: 45px;
+    }
+
+    .testimonial-heading h2 {
+        font-size: 30px;
+    }
+
+    .testimonial-card {
+        min-height: 600px;
+
+        padding: 45px 30px 35px;
+    }
+
+    .testimonial-img {
+        width: 145px;
+        height: 145px;
+    }
+
+    .testimonial-card p {
+        font-size: 16px;
+    }
+
+    .testimonial-carousel .owl-nav .owl-prev {
+        left: -10px;
+    }
+
+    .testimonial-carousel .owl-nav .owl-next {
+        right: -10px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media only screen and (max-width: 767px) {
+
+    .testimonial-section {
+        padding: 65px 0 60px;
+    }
+
+    .testimonial-heading {
+        margin-bottom: 35px;
+    }
+
+    .testimonial-heading span {
+        font-size: 13px;
+        letter-spacing: 1.5px;
+    }
+
+    .testimonial-heading h2 {
+        font-size: 25px;
+        line-height: 1.3;
+    }
+
+    .testimonial-item {
+        padding: 10px 5px;
+    }
+
+    .testimonial-card {
+        min-height: 540px;
+
+        padding: 35px 22px 30px;
+
+        border-radius: 18px;
+    }
+
+    .testimonial-img {
+        width: 125px;
+        height: 125px;
+
+        border-width: 3px;
+
+        margin-bottom: 25px;
+    }
+
+    .testimonial-quote {
+        font-size: 40px;
+
+        height: 35px;
+
+        margin-bottom: 10px;
+    }
+
+    .testimonial-stars {
+        margin-bottom: 20px !important;
+    }
+
+    .testimonial-stars span {
+        font-size: 17px !important;
+    }
+
+    .testimonial-card p {
+        font-size: 14px;
+
+        line-height: 1.7;
+
+        max-width: 320px;
+    }
+
+    .testimonial-card h4 {
+        font-size: 20px;
+
+        margin-top: 25px;
+    }
+
+    .testimonial-card .member-label {
+        font-size: 14px;
+    }
+
+    .testimonial-carousel .owl-nav {
+        display: none;
+    }
+
+    .testimonial-carousel .owl-dots {
+        margin-top: 25px;
+    }
+
+    .testimonial-google-review {
+        margin-top: 35px;
+    }
+
+    .testimonial-google-review a {
+        font-size: 13px;
+
+        padding: 10px 18px;
+    }
+
+}
 /*---------------------
   Services Section
 -----------------------*/
@@ -4370,6 +4827,7 @@ ol {
 }
 
 }
+
 /******************************************************************
   Logo Size Fix
   The new logo image is much taller than the old one (icon +
