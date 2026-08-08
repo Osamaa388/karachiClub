@@ -185,3 +185,52 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+$(document).ready(function () {
+
+    $('.testimonial-carousel').owlCarousel({
+
+        loop: true,
+
+        margin: 20,
+
+        nav: true,
+
+        dots: true,
+
+        autoplay: true,
+
+        autoplayTimeout: 5000,
+
+        autoplayHoverPause: true,
+
+        smartSpeed: 700,
+
+        navText: [
+            '<span>‹</span>',
+            '<span>›</span>'
+        ],
+
+        responsive: {
+
+            0: {
+                items: 1,
+                margin: 15
+            },
+
+            768: {
+                items: 2,
+                margin: 20
+            },
+
+            992: {
+                items: 3,
+                margin: 20
+            }
+
+        }
+
+    });
+
+});
