@@ -234,3 +234,247 @@ $(document).ready(function () {
     });
 
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const slider = document.querySelector(".kc-hero");
+    const slides = document.querySelectorAll(".kc-slide");
+    const prevBtn = document.querySelector(".kc-prev");
+    const nextBtn = document.querySelector(".kc-next");
+    const dotsContainer = document.querySelector(".kc-slider-dots");
+
+    let current = 0;
+    let timer;
+
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+
+    /* ==========================================
+       CREATE DOTS AUTOMATICALLY
+    ========================================== */
+
+    slides.forEach(function (_, index) {
+
+        const dot = document.createElement("button");
+
+        dot.className = "kc-slider-dot";
+
+        if (index === 0) {
+            dot.classList.add("active");
+        }
+
+        dot.setAttribute("aria-label", "Go to slide " + (index + 1));
+
+        dot.addEventListener("click", function () {
+            goToSlide(index);
+            restartSlider();
+        });
+
+        dotsContainer.appendChild(dot);
+
+    });
+
+
+    const dots = document.querySelectorAll(".kc-slider-dot");
+
+
+    /* ==========================================
+       SHOW SLIDE
+    ========================================== */
+
+    function goToSlide(index) {
+
+        if (index >= slides.length) {
+            index = 0;
+        }
+
+        if (index < 0) {
+            index = slides.length - 1;
+        }
+
+
+        slides.forEach(function (slide) {
+            slide.classList.remove("active");
+        });
+
+
+        dots.forEach(function (dot) {
+            dot.classList.remove("active");
+        });
+
+
+        slides[index].classList.add("active");
+        dots[index].classList.add("active");
+
+
+        current = index;
+
+    }
+
+
+    /* ==========================================
+       NEXT
+    ========================================== */
+
+    function nextSlide() {
+        goToSlide(current + 1);
+    }
+
+
+    /* ==========================================
+       PREVIOUS
+    ========================================== */
+
+    function previousSlide() {
+        goToSlide(current - 1);
+    }
+
+
+    /* ==========================================
+       ARROWS
+    ========================================== */
+
+    nextBtn.addEventListener("click", function () {
+
+        nextSlide();
+
+        restartSlider();
+
+    });
+
+
+    prevBtn.addEventListener("click", function () {
+
+        previousSlide();
+
+        restartSlider();
+
+    });
+
+
+    /* ==========================================
+       AUTO SLIDER
+    ========================================== */
+
+    function startSlider() {
+
+        timer = setInterval(function () {
+
+            nextSlide();
+
+        }, 5000);
+
+    }
+
+
+    function restartSlider() {
+
+        clearInterval(timer);
+
+        startSlider();
+
+    }
+
+
+    /* ==========================================
+       MOBILE SWIPE
+    ========================================== */
+
+    slider.addEventListener("touchstart", function (e) {
+
+        touchStartX = e.changedTouches[0].screenX;
+
+    }, { passive: true });
+
+
+    slider.addEventListener("touchend", function (e) {
+
+        touchEndX = e.changedTouches[0].screenX;
+
+        handleSwipe();
+
+    }, { passive: true });
+
+
+    function handleSwipe() {
+
+        const distance = touchStartX - touchEndX;
+
+
+        if (Math.abs(distance) < 50) {
+            return;
+        }
+
+
+        if (distance > 0) {
+
+            nextSlide();
+
+        } else {
+
+            previousSlide();
+
+        }
+
+
+        restartSlider();
+
+    }
+
+
+    /* ==========================================
+       DESKTOP KEYBOARD
+    ========================================== */
+
+    document.addEventListener("keydown", function (e) {
+
+        if (e.key === "ArrowRight") {
+
+            nextSlide();
+
+            restartSlider();
+
+        }
+
+
+        if (e.key === "ArrowLeft") {
+
+            previousSlide();
+
+            restartSlider();
+
+        }
+
+    });
+
+
+    /* ==========================================
+       PAUSE WHEN MOUSE OVER
+    ========================================== */
+
+    slider.addEventListener("mouseenter", function () {
+
+        clearInterval(timer);
+
+    });
+
+
+    slider.addEventListener("mouseleave", function () {
+
+        startSlider();
+
+    });
+
+
+    /* ==========================================
+       START
+    ========================================== */
+
+    goToSlide(0);
+
+    startSlider();
+
+});
+
