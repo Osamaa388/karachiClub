@@ -1,0 +1,2061 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <link href="img/favicon.ico" rel="icon" type="image/x-icon"/>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <meta content="Ladies-only fitness at Karachi Club GYM, Nazimabad. Dedicated ladies timing, gym facilities, aerobics, yoga, personal training and membership offers." name="description"/>
+        <title>
+            Ladies Gym in Karachi | Karachi Club GYM Nazimabad
+        </title>
+        <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&amp;display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&amp;display=swap" rel="stylesheet"/>
+        <link href="css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="css/font-awesome.min.css" rel="stylesheet"/>
+        <link href="css/flaticon.css" rel="stylesheet"/>
+        <link href="css/style.css" rel="stylesheet"/>
+         <link href="css/ladies.css" rel="stylesheet"/>
+        <style>
+
+            :root {
+    --p: #ff2d95;
+    --pd: #d91f78;
+    --bg: #090709;
+    --card: #140d12;
+    --muted: #b9adb5;
+    --line: rgba(255, 45, 149, .2);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body.ladies {
+    background: var(--bg);
+    color: #fff;
+    overflow-x: hidden;
+}
+
+body.ladies a {
+    transition: .3s ease;
+}
+
+/* Header/footer use the same site structure;
+only accent changes to pink. */
+.ladies .nav-menu ul li.active>a, .ladies .nav-menu ul li:hover>a {
+    color: var(--p)!important;
+}
+
+
+
+.ladies .nav-menu ul li a:after {
+    background: var(--p)!important;
+}
+
+.ladies .top-option a:hover, .ladies .canvas-social a:hover {
+    color: var(--p)!important;
+}
+
+.ladies .footer-section a:hover, .ladies .footer-section a:focus {
+    color: var(--p)!important;
+    background: transparent!important;
+    box-shadow: none!important;
+}
+
+.ladies-hero {
+    min-height: 690px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(90deg, rgba(5, 3, 5, .94), rgba(10, 5, 9, .72), rgba(5, 3, 5, .92)), url('img/classes/class-5.jpg') center/cover no-repeat;
+}
+
+.ladies-hero:before {
+    content: "";
+    position: absolute;
+    width: 650px;
+    height: 650px;
+    right: -240px;
+    top: -180px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 45, 149, .24), transparent 68%);
+}
+
+.hero-inner {
+    position: relative;
+    z-index: 2;
+    padding: 150px 0 85px;
+}
+
+.hero-copy {
+    max-width: 730px;
+}
+
+.eyebrow, .kicker {
+    color: var(--p);
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.eyebrow:before {
+    content: "";
+    width: 34px;
+    height: 2px;
+    background: var(--p);
+    box-shadow: 0 0 16px rgba(255, 45, 149, .6);
+}
+
+.hero-copy h1 {
+    font-family: Oswald, sans-serif;
+    font-size: 76px;
+    line-height: 1.02;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 0 22px;
+    color: #fff;
+}
+
+.hero-copy h1 span {
+    color: var(--p);
+}
+
+.hero-copy p {
+    max-width: 600px;
+    color: #d0c7cc;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 28px;
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.ladies-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-height: 54px;
+    padding: 0 27px;
+    border: 1px solid var(--p);
+    border-radius: 3px;
+    background: var(--p);
+    color: #fff!important;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 12px 32px rgba(255, 45, 149, .18);
+}
+
+.ladies-btn:hover {
+    background: var(--pd);
+    border-color: var(--pd);
+    transform: translateY(-3px);
+    box-shadow: 0 16px 38px rgba(255, 45, 149, .27);
+}
+
+.ladies-btn.outline {
+    background: transparent;
+    box-shadow: none;
+    border-color: rgba(255, 255, 255, .28);
+}
+
+.ladies-btn.outline:hover {
+    background: rgba(255, 45, 149, .1);
+    border-color: var(--p);
+}
+
+.badges {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 32px;
+}
+
+.badge {
+    padding: 10px 14px;
+    border: 1px solid rgba(255, 255, 255, .12);
+    border-radius: 30px;
+    background: rgba(255, 255, 255, .045);
+    color: #ddd5da;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.badge i {
+    color: var(--p);
+    margin-right: 6px;
+}
+
+.section {
+    padding: 90px 0;
+    background: var(--bg);
+}
+
+.section.alt {
+    background: #100a0f;
+}
+
+.heading {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 45px;
+}
+
+.heading h2 {
+    font-family: Oswald, sans-serif;
+    color: #fff;
+    font-size: 38px;
+    line-height: 1.15;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 8px 0 13px;
+}
+
+.heading p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 0 auto;
+}
+
+.benefit, .service {
+    height: 100%;
+    padding: 30px 24px;
+    background: linear-gradient(145deg, #171017, #0d090d);
+    border: 1px solid rgba(255, 255, 255, .075);
+    border-radius: 12px;
+    text-align: center;
+    transition: .4s ease;
+}
+
+.benefit:hover, .service:hover {
+    transform: translateY(-8px);
+    border-color: var(--line);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, .3);
+}
+
+.icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--p);
+    background: rgba(255, 45, 149, .08);
+    border: 1px solid var(--line);
+    font-size: 24px;
+    transition: .35s ease;
+}
+
+.benefit:hover .icon, .service:hover .icon {
+    background: var(--p);
+    color: #fff;
+    transform: scale(1.06);
+}
+
+.benefit h3, .service h3 {
+    color: #fff;
+    font-family: Oswald, sans-serif;
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.benefit p, .service p {
+    color: #aaa0a7;
+    font-size: 13px;
+    line-height: 1.75;
+    margin: 0;
+}
+
+.split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
+    align-items: center;
+}
+
+.split-img {
+    min-height: 500px;
+    border-radius: 14px;
+    border: 1px solid var(--line);
+    background: url('img/classes/class-5.jpg') center/cover no-repeat;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, .35);
+}
+
+.split-img:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 40%, rgba(0, 0, 0, .78));
+}
+
+.img-label {
+    position: absolute;
+    z-index: 1;
+    bottom: 22px;
+    left: 24px;
+    font-family: Oswald, sans-serif;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.copy h2 {
+    font-family: Oswald, sans-serif;
+    color: #fff;
+    font-size: 40px;
+    line-height: 1.15;
+    text-transform: uppercase;
+    margin: 10px 0 17px;
+}
+
+.copy>p {
+    color: #b7adb3;
+    font-size: 14px;
+    line-height: 1.85;
+}
+
+.checks {
+    list-style: none;
+    padding: 0;
+    margin: 22px 0 26px;
+}
+
+.checks li {
+    display: flex;
+    gap: 11px;
+    color: #e7e0e4;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.checks i {
+    color: var(--p);
+    margin-top: 3px;
+}
+
+.time-card {
+    max-width: 900px;
+    margin: auto;
+    padding: 38px;
+    text-align: center;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: radial-gradient(circle at 90% 10%, rgba(255, 45, 149, .13), transparent 30%), linear-gradient(135deg, #1a0d16, #0e090d);
+}
+
+.time-card i {
+    color: var(--p);
+    font-size: 30px;
+}
+
+.time-card h3 {
+    font-family: Oswald, sans-serif;
+    color: #fff;
+    font-size: 25px;
+    margin: 10px 0;
+}
+
+.time {
+    font-family: Oswald, sans-serif;
+    color: var(--p);
+    font-size: 44px;
+}
+
+.time-card p {
+    color: #aaa0a7;
+    font-size: 13px;
+    margin: 5px 0 0;
+}
+
+.service {
+    text-align: left;
+}
+
+.service-head {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 15px;
+}
+
+.service-head .icon {
+    width: 52px;
+    height: 52px;
+    flex: 0 0 52px;
+    margin: 0;
+    font-size: 19px;
+}
+
+.service h3 {
+    margin: 0;
+}
+
+.price {
+    height: 100%;
+    position: relative;
+    padding: 32px 27px 28px;
+    background: linear-gradient(150deg, #1a0d16, #0f090d);
+    border: 1px solid rgba(255, 255, 255, .09);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: .4s ease;
+}
+
+.price:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--p), transparent);
+}
+
+.price:hover {
+    transform: translateY(-9px);
+    border-color: rgba(255, 45, 149, .45);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, .35);
+}
+
+.price.featured {
+    border-color: rgba(255, 45, 149, .55);
+    background: linear-gradient(150deg, #21101b, #110a0f);
+}
+
+.popular {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    background: var(--p);
+    padding: 6px 10px;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.price h3 {
+    font-family: Oswald, sans-serif;
+    color: #fff;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin: 0 0 7px;
+}
+
+.discount {
+    color: var(--p);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.price-note {
+    color: #aaa0a7;
+    font-size: 13px;
+    line-height: 1.7;
+    min-height: 44px;
+    margin: 18px 0;
+}
+
+.price ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 23px;
+}
+
+.price li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .065);
+    color: #d5cdd2;
+    font-size: 13px;
+}
+
+.price li:last-child {
+    border-bottom: 0;
+}
+
+.price li i {
+    color: var(--p);
+    margin-right: 8px;
+}
+
+.price .ladies-btn {
+    width: 100%;
+}
+
+.fees {
+    max-width: 980px;
+    margin: 45px auto 0;
+    padding: 28px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: #100a0f;
+}
+
+.fees h3 {
+    text-align: center;
+    color: #fff;
+    font-family: Oswald, sans-serif;
+    text-transform: uppercase;
+    font-size: 24px;
+    margin-bottom: 18px;
+}
+
+.fee-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding: 12px 3px;
+    border-bottom: 1px solid rgba(255, 255, 255, .065);
+    color: #d7d0d5;
+    font-size: 14px;
+}
+
+.fee-row:last-child {
+    border-bottom: 0;
+}
+
+.fee-row strong {
+    color: var(--p);
+}
+
+.faq {
+    max-width: 900px;
+    margin: auto;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+    border: 1px solid rgba(255, 255, 255, .075);
+    border-radius: 10px;
+    overflow: hidden;
+    background: #110b10;
+}
+
+.faq-q {
+    width: 100%;
+    border: 0;
+    background: transparent;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 22px;
+    text-align: left;
+    cursor: pointer;
+    font-family: Oswald, sans-serif;
+    font-size: 18px;
+}
+
+.faq-q:hover {
+    color: var(--p);
+    background: rgba(255, 45, 149, .04);
+}
+
+.faq-q i {
+    color: var(--p);
+    transition: .35s;
+}
+
+.faq-a {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 22px;
+    transition: max-height .45s ease, padding .35s ease;
+}
+
+.faq-a p {
+    color: #aaa0a7;
+    font-size: 13.5px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.faq-item.open .faq-a {
+    max-height: 150px;
+    padding: 0 22px 20px;
+}
+
+.faq-item.open .faq-q i {
+    transform: rotate(45deg);
+}
+
+.cta {
+    padding: 82px 0;
+    text-align: center;
+    background: linear-gradient(90deg, rgba(10, 5, 9, .97), rgba(34, 10, 23, .92)), url('img/banner-bg.jpg') center/cover no-repeat;
+}
+
+.cta h2 {
+    font-family: Oswald, sans-serif;
+    color: #fff;
+    font-size: 42px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.cta p {
+    max-width: 600px;
+    margin: 0 auto 25px;
+    color: #bcb2b8;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity .75s ease, transform .75s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: none;
+}
+
+@media(max-width:991px) {
+    .ladies-hero {
+        min-height: 630px;
+    }
+.hero-copy h1 {
+    font-size: 62px;
+}
+.split {
+    grid-template-columns: 1fr;
+    gap: 35px;
+}
+.split-img {
+    min-height: 420px;
+}
+.section {
+    padding: 75px 0;
+}
+
+}
+
+@media(max-width:767px) {
+    .ladies-hero {
+        min-height: 650px;
+        align-items: flex-end;
+    }
+.hero-inner {
+    padding: 145px 20px 70px;
+}
+.hero-copy h1 {
+    font-size: 43px;
+}
+.hero-copy p {
+    font-size: 14px;
+}
+.actions {
+    display: block;
+}
+.ladies-btn {
+    width: 100%;
+    margin-bottom: 10px;
+}
+.heading h2, .copy h2 {
+    font-size: 30px;
+}
+.section {
+    padding: 65px 0;
+}
+.split-img {
+    min-height: 340px;
+}
+.time-card {
+    padding: 30px 18px;
+}
+.time {
+    font-size: 35px;
+}
+.fees {
+    padding: 22px 18px;
+}
+.fee-row {
+    font-size: 13px;
+}
+.cta h2 {
+    font-size: 32px;
+}
+
+}
+
+@media(max-width:480px) {
+    .hero-copy h1 {
+        font-size: 37px;
+    }
+.eyebrow {
+    font-size: 11px;
+}
+.badge {
+    font-size: 10px;
+}
+.price {
+    padding: 28px 21px;
+}
+.faq-q {
+    font-size: 16px;
+    padding: 18px;
+}
+
+}
+
+
+
+
+/* =====================================================
+   LADIES MOBILE OFFCANVAS — PREMIUM FINAL POLISH
+   ===================================================== */
+
+@media (max-width: 767px) {
+
+    /* Drawer */
+    .ladies .offcanvas-menu-wrapper {
+        width: min(310px, 76vw) !important;
+        max-width: 310px !important;
+        padding: 62px 24px 28px !important;
+        background: #ffffff !important;
+        box-shadow: 12px 0 35px rgba(0, 0, 0, 0.18);
+        z-index: 9999 !important;
+    }
+
+    /* FIX: visible close / X button */
+    .ladies .offcanvas-menu-wrapper .canvas-close {
+        display: flex !important;
+        position: absolute !important;
+        top: 17px !important;
+        right: 17px !important;
+
+        width: 32px !important;
+        height: 32px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        border: 1px solid #222 !important;
+        border-radius: 2px !important;
+        background: #fff !important;
+
+        color: #111 !important;
+        font-size: 18px !important;
+        line-height: 1 !important;
+
+        cursor: pointer !important;
+        z-index: 10001 !important;
+        transition: all .25s ease !important;
+    }
+
+    .ladies .offcanvas-menu-wrapper .canvas-close:hover {
+        color: #ff2b91 !important;
+        border-color: #ff2b91 !important;
+        transform: rotate(90deg);
+    }
+
+    .ladies .offcanvas-menu-wrapper .canvas-close i {
+        display: block !important;
+        line-height: 1 !important;
+    }
+
+    /* Search */
+    .ladies .offcanvas-menu-wrapper .canvas-search {
+        display: block !important;
+        margin: 0 0 18px !important;
+        padding: 0 !important;
+
+        text-align: center !important;
+        color: #111 !important;
+        font-size: 19px !important;
+        line-height: 1 !important;
+    }
+
+    /* Menu */
+    .ladies .offcanvas-menu-wrapper .canvas-menu {
+        display: block !important;
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .ladies .offcanvas-menu-wrapper .canvas-menu ul {
+        display: block !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        list-style: none !important;
+    }
+
+    .ladies .offcanvas-menu-wrapper .canvas-menu li {
+        display: block !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .ladies .offcanvas-menu-wrapper .canvas-menu li a {
+        display: block !important;
+
+        margin: 0 !important;
+        padding: 10px 0 !important;
+
+        color: #151515 !important;
+        background: transparent !important;
+
+        border: 0 !important;
+        border-bottom: 1px solid #dedede !important;
+
+        font-family: "Oswald", sans-serif !important;
+        font-size: 13px !important;
+        font-weight: 600 !important;
+        letter-spacing: .35px !important;
+        line-height: 1.35 !important;
+        text-transform: uppercase !important;
+        text-decoration: none !important;
+
+        transition:
+            color .25s ease,
+            padding-left .25s ease,
+            border-color .25s ease !important;
+    }
+
+    .ladies .offcanvas-menu-wrapper .canvas-menu li a:hover {
+        color: #ff2b91 !important;
+        padding-left: 5px !important;
+        border-color: #ff2b91 !important;
+        background: transparent !important;
+    }
+
+    /* Ladies Fitness — pink active item */
+    .ladies .offcanvas-menu .ladies-link a {
+        color: #ff2b91 !important;
+    }
+
+    /* Social icons */
+    .ladies .offcanvas-menu-wrapper .canvas-social {
+        margin: 18px 0 0 !important;
+        padding: 0 !important;
+        text-align: center !important;
+    }
+
+    .ladies .offcanvas-menu-wrapper .canvas-social a {
+        color: #222 !important;
+        font-size: 14px !important;
+        margin-right: 8px !important;
+        transition: color .25s ease, transform .25s ease !important;
+    }
+
+    .ladies .offcanvas-menu-wrapper .canvas-social a:hover {
+        color: #ff2b91 !important;
+        transform: translateY(-2px);
+    }
+
+    /* Overlay */
+    .ladies .offcanvas-menu-overlay {
+        z-index: 9998 !important;
+    }
+}
+
+/* Very small phones */
+@media (max-width: 380px) {
+
+    .ladies .offcanvas-menu-wrapper {
+        width: 290px !important;
+        padding-left: 21px !important;
+        padding-right: 21px !important;
+    }
+
+    .ladies .offcanvas-menu-wrapper .canvas-menu li a {
+        font-size: 12px !important;
+        padding-top: 9px !important;
+        padding-bottom: 9px !important;
+    }
+}
+
+
+/* =====================================================
+   LADIES MOBILE OFFCANVAS MENU - FIX
+   The original theme hides .canvas-menu on mobile and
+   normally relies on SlickNav to create another menu.
+   On this page that generated menu is not appearing, so
+   we display the existing canvas menu directly.
+   ===================================================== */
+
+@media (max-width: 767px) {
+
+    .ladies .offcanvas-menu-wrapper .canvas-menu {
+        display: block !important;
+        width: 100%;
+        margin: 18px 0 0;
+    }
+
+    .ladies .offcanvas-menu-wrapper .canvas-menu ul {
+        display: block !important;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .ladies .offcanvas-menu-wrapper .canvas-menu li {
+        display: block !important;
+        margin: 0;
+        padding: 0;
+    }
+
+    .ladies .offcanvas-menu-wrapper .canvas-menu li a {
+        display: block !important;
+        padding: 12px 0;
+        margin: 0;
+        color: #151515 !important;
+        background: transparent !important;
+        border-bottom: 1px solid rgba(21, 21, 21, .14);
+        font-family: "Oswald", sans-serif;
+        font-size: 15px;
+        font-weight: 600;
+        letter-spacing: .4px;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: color .3s ease, padding-left .3s ease;
+    }
+
+    .ladies .offcanvas-menu-wrapper .canvas-menu li a:hover,
+    .ladies .offcanvas-menu-wrapper .canvas-menu li.active a {
+        color: var(--p) !important;
+        padding-left: 6px;
+    }
+
+    .ladies .offcanvas-menu-wrapper .canvas-search {
+        display: block !important;
+        color: #151515;
+    }
+
+    .ladies .offcanvas-menu-wrapper .canvas-social {
+        margin-top: 10px;
+    }
+
+    .ladies .offcanvas-menu-wrapper .canvas-social a:hover {
+        color: var(--p) !important;
+    }
+
+    /* Keep the empty SlickNav placeholder from creating spacing. */
+    .ladies .offcanvas-menu-wrapper #mobile-menu-wrap {
+        display: none !important;
+    }
+}
+
+/* =========================================================
+   LADIES LOGO — SIZE & VISIBILITY ONLY
+   ========================================================= */
+
+.ladies-page .logo img,
+.ladies-page .header-logo img,
+.ladies-page .navbar-brand img {
+    width: 250px !important;
+    height: auto !important;
+    max-width: none !important;
+    min-width: 250px !important;
+    display: block !important;
+    object-fit: contain !important;
+}
+
+
+/* Desktop */
+@media (min-width: 992px) {
+
+    .ladies-page .logo {
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    .ladies-page .logo img,
+    .ladies-page .header-logo img,
+    .ladies-page .navbar-brand img {
+        width: 250px !important;
+        min-width: 250px !important;
+    }
+}
+
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .ladies-page .logo img,
+    .ladies-page .header-logo img,
+    .ladies-page .navbar-brand img {
+        width: 180px !important;
+        min-width: 180px !important;
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 767px) {
+
+    .ladies-page .logo img,
+    .ladies-page .header-logo img,
+    .ladies-page .navbar-brand img {
+        width: 145px !important;
+        min-width: 145px !important;
+        height: auto !important;
+    }
+}
+
+
+/* Small phones */
+@media (max-width: 380px) {
+
+    .ladies-page .logo img,
+    .ladies-page .header-logo img,
+    .ladies-page .navbar-brand img {
+        width: 135px !important;
+        min-width: 135px !important;
+    }
+}
+
+</style>
+    </head>
+    <body class="ladies">
+        <!-- SAME HEADER -->
+        <div class="offcanvas-menu-overlay">
+        </div>
+        <div class="offcanvas-menu-wrapper">
+            <div class="canvas-close">
+                <i class="fa fa-close">
+                </i>
+            </div>
+            <div class="canvas-search search-switch">
+                <i class="fa fa-search">
+                </i>
+            </div>
+            <nav class="canvas-menu mobile-menu">
+                <ul>
+                    <li>
+                        <a href="./index.html">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./about-us.html">
+                            About Us
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./services.html">
+                            Services
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./timing.html">
+                            Timings
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./success-stories.html">
+                            Success Stories
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./team.html">
+                            Our Team
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./bmi-calculator.html">
+                            BMI Calculator
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./gallery.html">
+                            Gallery
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="./ladies.html">
+                            Ladies Fitness
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./contact.html">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div id="mobile-menu-wrap">
+            </div>
+            <div class="canvas-social">
+                <a href="https://www.facebook.com/share/18ienCUo96/">
+                    <i class="fa fa-facebook">
+                    </i>
+                </a>
+                <a href="https://www.youtube.com/@karachiclubofficial">
+                    <i class="fa fa-youtube-play">
+                    </i>
+                </a>
+                <a href="https://www.instagram.com/karachiclubofficial">
+                    <i class="fa fa-instagram">
+                    </i>
+                </a>
+            </div>
+        </div>
+        <header class="header-section">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="logo">
+                            <a href="./index.html">
+                                <img alt="Karachi Club GYM" src="img/ladieslogo.png
+                                "/>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <nav class="nav-menu">
+                            <ul>
+                                <li>
+                                    <a href="./index.html">
+                                        Home
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./about-us.html">
+                                        About Us
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./services.html">
+                                        Services
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./timing.html">
+                                        Timings
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./success-stories.html">
+                                        Success Stories
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./team.html">
+                                        Our Team
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./bmi-calculator.html">
+                                        BMI Calculator
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./gallery.html">
+                                        Gallery
+                                    </a>
+                                </li>
+                                <li class="active">
+                                    <a href="./ladies.html">
+                                        Ladies Fitness
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./contact.html">
+                                        Contact
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="top-option">
+                            <div class="to-search search-switch">
+                                <i class="fa fa-search">
+                                </i>
+                            </div>
+                            <div class="to-social">
+                                <a href="https://www.facebook.com/share/18ienCUo96/">
+                                    <i class="fa fa-facebook">
+                                    </i>
+                                </a>
+                                <a href="https://www.youtube.com/@karachiclubofficial">
+                                    <i class="fa fa-youtube-play">
+                                    </i>
+                                </a>
+                                <a href="https://www.instagram.com/karachiclubofficial">
+                                    <i class="fa fa-instagram">
+                                    </i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="canvas-open">
+                    <i class="fa fa-bars">
+                    </i>
+                </div>
+            </div>
+        </header>
+        <!-- HERO -->
+        <section class="ladies-hero">
+            <div class="container">
+                <div class="hero-inner">
+                    <div class="hero-copy reveal">
+                        <span class="eyebrow">
+                            Ladies Only • Nazimabad
+                        </span>
+                        <h1>
+                            STRONGER.
+                            <br/>
+                            <span>
+                                CONFIDENT.
+                            </span>
+                            <br/>
+                            YOU.
+                        </h1>
+                        <p>
+                            A dedicated ladies-only fitness experience at Karachi Club GYM, with dedicated afternoon timing and practical fitness options for your routine.
+                        </p>
+                        <div class="actions">
+                            <a class="ladies-btn" href="https://wa.me/923112447707" target="_blank">
+                                <i class="fa fa-whatsapp">
+                                </i>
+                                Book a Visit
+                            </a>
+                            <a class="ladies-btn outline" href="#pricing">
+                                View Membership Offers
+                            </a>
+                        </div>
+                        <div class="badges">
+                            <span class="badge">
+                                <i class="fa fa-clock-o">
+                                </i>
+                                11:00 AM – 5:00 PM
+                            </span>
+                            <span class="badge">
+                                <i class="fa fa-map-marker">
+                                </i>
+                                Nazimabad No. 2
+                            </span>
+                            <span class="badge">
+                                <i class="fa fa-female">
+                                </i>
+                                Ladies Only
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- BENEFITS -->
+        <section class="section alt">
+            <div class="container">
+                <div class="heading reveal">
+                    <span class="kicker">
+                        A Dedicated Fitness Experience
+                    </span>
+                    <h2>
+                        Made for Your Fitness Goals
+                    </h2>
+                    <p>
+                        Train during dedicated ladies-only hours with the services and facilities listed in the Karachi Club GYM ladies package.
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6 mb-4">
+                        <div class="benefit reveal">
+                            <div class="icon">
+                                <i class="fa fa-clock-o">
+                                </i>
+                            </div>
+                            <h3>
+                                Dedicated Hours
+                            </h3>
+                            <p>
+                                Ladies-only training time from 11:00 AM to 5:00 PM.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 mb-4">
+                        <div class="benefit reveal">
+                            <div class="icon">
+                                <i class="fa fa-bolt">
+                                </i>
+                            </div>
+                            <h3>
+                                Training Options
+                            </h3>
+                            <p>
+                                Manual machines, treadmill training and personal training options.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 mb-4">
+                        <div class="benefit reveal">
+                            <div class="icon">
+                                <i class="fa fa-leaf">
+                                </i>
+                            </div>
+                            <h3>
+                                Aerobics + Yoga
+                            </h3>
+                            <p>
+                                Additional fitness activities listed in the ladies package.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 mb-4">
+                        <div class="benefit reveal">
+                            <div class="icon">
+                                <i class="fa fa-lock">
+                                </i>
+                            </div>
+                            <h3>
+                                Locker Access
+                            </h3>
+                            <p>
+                                Locker is included as a listed ladies package service.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- INTRO -->
+        <section class="section">
+            <div class="container">
+                <div class="split">
+                    <div class="split-img reveal">
+                        <div class="img-label">
+                            Train With Confidence
+                        </div>
+                    </div>
+                    <div class="copy reveal">
+                        <span class="kicker">
+                            Ladies Fitness at Karachi Club
+                        </span>
+                        <h2>
+                            Your Space. Your Pace. Your Progress.
+                        </h2>
+                        <p>
+                            Whether you are getting started, returning to training or making your routine more consistent, the ladies-only hours give you a dedicated window to focus on your workout.
+                        </p>
+                        <ul class="checks">
+                            <li>
+                                <i class="fa fa-check-circle">
+                                </i>
+                                <span>
+                                    Dedicated ladies-only timing:
+                                    <strong>
+                                        11:00 AM – 5:00 PM
+                                    </strong>
+                                </span>
+                            </li>
+                            <li>
+                                <i class="fa fa-check-circle">
+                                </i>
+                                <span>
+                                    Manual machines and treadmill
+                                </span>
+                            </li>
+                            <li>
+                                <i class="fa fa-check-circle">
+                                </i>
+                                <span>
+                                    Aerobics + Yoga
+                                </span>
+                            </li>
+                            <li>
+                                <i class="fa fa-check-circle">
+                                </i>
+                                <span>
+                                    Personal training and diet plan options
+                                </span>
+                            </li>
+                        </ul>
+                        <a class="ladies-btn" href="https://wa.me/923112447707" target="_blank">
+                            Ask About Membership
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- TIMING -->
+        <section class="section alt">
+            <div class="container">
+                <div class="heading reveal">
+                    <span class="kicker">
+                        Ladies-Only Timing
+                    </span>
+                    <h2>
+                        Your Dedicated Training Window
+                    </h2>
+                </div>
+                <div class="time-card reveal">
+                    <i class="fa fa-female">
+                    </i>
+                    <h3>
+                        Ladies Only
+                    </h3>
+                    <div class="time">
+                        11:00 AM — 5:00 PM
+                    </div>
+                    <p>
+                        Timing shown on the provided Karachi Club GYM ladies package.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- SERVICES -->
+        <section class="section">
+            <div class="container">
+                <div class="heading reveal">
+                    <span class="kicker">
+                        What’s Available
+                    </span>
+                    <h2>
+                        Fitness Options for Your Routine
+                    </h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="service reveal">
+                            <div class="service-head">
+                                <div class="icon">
+                                    <i class="fa fa-cogs">
+                                    </i>
+                                </div>
+                                <h3>
+                                    Manual Machines
+                                </h3>
+                            </div>
+                            <p>
+                                Training access listed as part of the ladies package.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="service reveal">
+                            <div class="service-head">
+                                <div class="icon">
+                                    <i class="fa fa-tachometer">
+                                    </i>
+                                </div>
+                                <h3>
+                                    Treadmill
+                                </h3>
+                            </div>
+                            <p>
+                                Cardio training option included in the listed package services.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="service reveal">
+                            <div class="service-head">
+                                <div class="icon">
+                                    <i class="fa fa-heartbeat">
+                                    </i>
+                                </div>
+                                <h3>
+                                    Aerobics + Yoga
+                                </h3>
+                            </div>
+                            <p>
+                                Group fitness options listed specifically on the ladies package.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="service reveal">
+                            <div class="service-head">
+                                <div class="icon">
+                                    <i class="fa fa-user">
+                                    </i>
+                                </div>
+                                <h3>
+                                    Personal Training
+                                </h3>
+                            </div>
+                            <p>
+                                Personal training is available as a separately listed service.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="service reveal">
+                            <div class="service-head">
+                                <div class="icon">
+                                    <i class="fa fa-cutlery">
+                                    </i>
+                                </div>
+                                <h3>
+                                    Diet Plan
+                                </h3>
+                            </div>
+                            <p>
+                                A diet plan is listed as an additional service in the package.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="service reveal">
+                            <div class="service-head">
+                                <div class="icon">
+                                    <i class="fa fa-lock">
+                                    </i>
+                                </div>
+                                <h3>
+                                    Locker
+                                </h3>
+                            </div>
+                            <p>
+                                Locker access is listed in the package details.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- PRICING -->
+        <section class="section alt" id="pricing">
+            <div class="container">
+                <div class="heading reveal">
+                    <span class="kicker">
+                        Ladies Membership Offers
+                    </span>
+                    <h2>
+                        Choose Your Membership Duration
+                    </h2>
+                    <p>
+                        These discounts are taken directly from the ladies pricing poster you provided.
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="price reveal">
+                            <h3>
+                                3 Months
+                            </h3>
+                            <span class="discount">
+                                10% OFF
+                            </span>
+                            <p class="price-note">
+                                A shorter commitment for getting your routine started.
+                            </p>
+                            <ul>
+                                <li>
+                                    <i class="fa fa-check">
+                                    </i>
+                                    Ladies-only timing
+                                </li>
+                                <li>
+                                    <i class="fa fa-check">
+                                    </i>
+                                    Manual machines
+                                </li>
+                                <li>
+                                    <i class="fa fa-check">
+                                    </i>
+                                    Treadmill
+                                </li>
+                                <li>
+                                    <i class="fa fa-check">
+                                    </i>
+                                    Aerobics + Yoga
+                                </li>
+                            </ul>
+                            <a class="ladies-btn" href="https://wa.me/923112447707" target="_blank">
+                                Ask for Offer
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="price featured reveal">
+                            <span class="popular">
+                                Popular
+                            </span>
+                            <h3>
+                                6 Months
+                            </h3>
+                            <span class="discount">
+                                15% OFF
+                            </span>
+                            <p class="price-note">
+                                A balanced membership period for a consistent routine.
+                            </p>
+                            <ul>
+                                <li>
+                                    <i class="fa fa-check">
+                                    </i>
+                                    Ladies-only timing
+                                </li>
+                                <li>
+                                    <i class="fa fa-check">
+                                    </i>
+                                    Manual machines
+                                </li>
+                                <li>
+                                    <i class="fa fa-check">
+                                    </i>
+                                    Treadmill
+                                </li>
+                                <li>
+                                    <i class="fa fa-check">
+                                    </i>
+                                    Aerobics + Yoga
+                                </li>
+                            </ul>
+                            <a class="ladies-btn" href="https://wa.me/923112447707" target="_blank">
+                                Ask for Offer
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="price reveal">
+                            <h3>
+                                12 Months
+                            </h3>
+                            <span class="discount">
+                                25% OFF
+                            </span>
+                            <p class="price-note">
+                                The highest listed discount for a full-year membership.
+                            </p>
+                            <ul>
+                                <li>
+                                    <i class="fa fa-check">
+                                    </i>
+                                    Ladies-only timing
+                                </li>
+                                <li>
+                                    <i class="fa fa-check">
+                                    </i>
+                                    Manual machines
+                                </li>
+                                <li>
+                                    <i class="fa fa-check">
+                                    </i>
+                                    Treadmill
+                                </li>
+                                <li>
+                                    <i class="fa fa-check">
+                                    </i>
+                                    Aerobics + Yoga
+                                </li>
+                            </ul>
+                            <a class="ladies-btn" href="https://wa.me/923112447707" target="_blank">
+                                Ask for Offer
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="fees reveal">
+                    <h3>
+                        Ladies Package Fee Details
+                    </h3>
+                    <div class="fee-row">
+                        <span>
+                            Admission Fee
+                        </span>
+                        <strong>
+                            Rs. 2,000
+                        </strong>
+                    </div>
+                    <div class="fee-row">
+                        <span>
+                            Manual Machines
+                        </span>
+                        <strong>
+                            Rs. 2,500
+                        </strong>
+                    </div>
+                    <div class="fee-row">
+                        <span>
+                            Treadmill
+                        </span>
+                        <strong>
+                            Rs. 2,000
+                        </strong>
+                    </div>
+                    <div class="fee-row">
+                        <span>
+                            Aerobics + Yoga
+                        </span>
+                        <strong>
+                            Rs. 2,500
+                        </strong>
+                    </div>
+                    <div class="fee-row">
+                        <span>
+                            Personal Training
+                        </span>
+                        <strong>
+                            Rs. 8,000
+                        </strong>
+                    </div>
+                    <div class="fee-row">
+                        <span>
+                            Diet Plan
+                        </span>
+                        <strong>
+                            Rs. 2,000
+                        </strong>
+                    </div>
+                    <div class="fee-row">
+                        <span>
+                            Locker
+                        </span>
+                        <strong>
+                            Rs. 500
+                        </strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FAQ -->
+        <section class="section">
+            <div class="container">
+                <div class="heading reveal">
+                    <span class="kicker">
+                        Need To Know
+                    </span>
+                    <h2>
+                        Ladies Fitness FAQs
+                    </h2>
+                    <p>
+                        Quick answers before you plan your first visit.
+                    </p>
+                </div>
+                <div class="faq">
+                    <div class="faq-item open reveal">
+                        <button class="faq-q" type="button">
+                            What are the ladies-only gym timings?
+                            <i class="fa fa-plus">
+                            </i>
+                        </button>
+                        <div class="faq-a">
+                            <p>
+                                The ladies-only timing shown on the provided Karachi Club GYM package is 11:00 AM to 5:00 PM.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item reveal">
+                        <button class="faq-q" type="button">
+                            What membership discounts are available?
+                            <i class="fa fa-plus">
+                            </i>
+                        </button>
+                        <div class="faq-a">
+                            <p>
+                                The provided package lists 10% off for 3 months, 15% off for 6 months and 25% off for 12 months.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item reveal">
+                        <button class="faq-q" type="button">
+                            Is personal training available?
+                            <i class="fa fa-plus">
+                            </i>
+                        </button>
+                        <div class="faq-a">
+                            <p>
+                                Yes. Personal training is listed as an available service with a fee of Rs. 8,000 on the provided ladies package.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item reveal">
+                        <button class="faq-q" type="button">
+                            Are aerobics and yoga available?
+                            <i class="fa fa-plus">
+                            </i>
+                        </button>
+                        <div class="faq-a">
+                            <p>
+                                Yes. Aerobics + Yoga are listed in the ladies package with a fee of Rs. 2,500.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item reveal">
+                        <button class="faq-q" type="button">
+                            Where is Karachi Club GYM located?
+                            <i class="fa fa-plus">
+                            </i>
+                        </button>
+                        <div class="faq-a">
+                            <p>
+                                The provided package lists: 2K 1/3 Block K, Nazimabad #2, near Memorial School, Karachi.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CTA -->
+        <section class="cta">
+            <div class="container reveal">
+                <h2>
+                    Ready to Start?
+                </h2>
+                <p>
+                    Ask the Karachi Club GYM team about ladies membership, services and the current offer for your preferred duration.
+                </p>
+                <a class="ladies-btn" href="https://wa.me/923112447707" target="_blank">
+                    <i class="fa fa-whatsapp">
+                    </i>
+                    WhatsApp Karachi Club GYM
+                </a>
+            </div>
+        </section>
+        <!-- SAME CONTACT STRIP -->
+        <div class="gettouch-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="gt-text">
+                            <i class="fa fa-map-marker">
+                            </i>
+                            <p>
+                                Nazimabad No. 2, Block 2,
+                                <br/>
+                                Karachi
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="gt-text">
+                            <i class="fa fa-mobile">
+                            </i>
+                            <ul>
+                                <li>
+                                    +92 311 2447707
+                                </li>
+                                <li>
+                                    +92 318 1065858
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="gt-text email">
+                            <i class="fa fa-envelope">
+                            </i>
+                            <p>
+                                karachiclub786@gmail.com
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- SAME FOOTER -->
+        <section class="footer-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="fs-about">
+                            <div class="fa-logo">
+                                <a href="./index.html">
+                                    <img alt="Karachi Club GYM" src="img/ladieslogo.png
+
+                                    "/>
+                                </a>
+                            </div>
+                            <p>
+                                Karachi Club GYM is a professional fitness club in Nazimabad offering strength training, fat-loss coaching and dedicated ladies-only sessions.
+                            </p>
+                            <div class="fa-social">
+                                <a href="https://www.facebook.com/share/18ienCUo96/">
+                                    <i class="fa fa-facebook">
+                                    </i>
+                                </a>
+                                <a href="https://www.youtube.com/@karachiclubofficial">
+                                    <i class="fa fa-youtube-play">
+                                    </i>
+                                </a>
+                                <a href="https://www.instagram.com/karachiclubofficial">
+                                    <i class="fa fa-instagram">
+                                    </i>
+                                </a>
+                                <a href="mailto:karachiclub786@gmail.com">
+                                    <i class="fa fa-envelope-o">
+                                    </i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6">
+                        <div class="fs-widget">
+                            <h4>
+                                Useful Links
+                            </h4>
+                            <ul>
+                                <li>
+                                    <a href="./success-stories.html">
+                                        Success Stories
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./services.html">
+                                        Services
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./gallery.html">
+                                        Gallery
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./bmi-calculator.html">
+                                        BMI Calculator
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6">
+                        <div class="fs-widget">
+                            <h4>
+                                Support
+                            </h4>
+                            <ul>
+                                <li>
+                                    <a href="./about-us.html">
+                                        About Us
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./team.html">
+                                        Our Team
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./contact.html">
+                                        Contact Us
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./timing.html">
+                                        Timing
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="fs-widget">
+                            <h4>
+                                Tips &amp; Guides
+                            </h4>
+                            <div class="fw-recent">
+                                <h6>
+                                    <a href="#">
+                                        Strength Training for Beginners
+                                    </a>
+                                </h6>
+                                <ul>
+                                    <li>
+                                        3 min read
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="fw-recent">
+                                <h6>
+                                    <a href="#">
+                                        Building a Consistent Fitness Routine
+                                    </a>
+                                </h6>
+                                <ul>
+                                    <li>
+                                        3 min read
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="search-model">
+            <div class="h-100 d-flex align-items-center justify-content-center">
+                <div class="search-close-switch">
+                    +
+                </div>
+                <form class="search-model-form">
+                    <input id="search-input" placeholder="Search here....." type="text"/>
+                </form>
+            </div>
+        </div>
+        <script src="js/jquery-3.3.1.min.js">
+        </script>
+        <script src="js/bootstrap.min.js">
+        </script>
+        <script src="js/jquery.magnific-popup.min.js">
+        </script>
+        <script src="js/jquery.slicknav.js">
+        </script>
+        <script src="js/main.js">
+        </script>
+        <script>
+            // FAQ accordion
+
+document.querySelectorAll('.faq-q').forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                                var item = btn.closest('.faq-item');
+
+                                document.querySelectorAll('.faq-item').forEach(function (x) {
+                                                if (x !== item) {
+                                                                x.classList.remove('open');
+                                                }
+                                });
+
+                                item.classList.toggle('open');
+                });
+});
+
+// Scroll reveal animation
+
+var items = document.querySelectorAll('.reveal');
+
+if ('IntersectionObserver' in window) {
+                var io = new IntersectionObserver(
+                                function (entries) {
+                                                entries.forEach(function (entry) {
+                                                                if (entry.isIntersecting) {
+                                                                                entry.target.classList.add('show');
+                                                                                io.unobserve(entry.target);
+                                                                }
+                                                });
+                                },
+                                { threshold: 0.12 }
+                );
+
+                items.forEach(function (item) {
+                                io.observe(item);
+                });
+} else {
+                items.forEach(function (item) {
+                                item.classList.add('show');
+                });
+}
+        </script>
+    </body>
+</html>
