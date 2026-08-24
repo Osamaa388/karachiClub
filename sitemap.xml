@@ -8,55 +8,61 @@
     </url>
 
     <url>
-        <loc>https://karachiclub.fitness/about-us.html</loc>
+        <loc>https://karachiclub.fitness/about-us</loc>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
-        <loc>https://karachiclub.fitness/services.html</loc>
+        <loc>https://karachiclub.fitness/services</loc>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
-        <loc>https://karachiclub.fitness/timing.html</loc>
+        <loc>https://karachiclub.fitness/timing</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://karachiclub.fitness/team.html</loc>
+        <loc>https://karachiclub.fitness/team</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <url>
-        <loc>https://karachiclub.fitness/success-stories.html</loc>
+        <loc>https://karachiclub.fitness/success-stories</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://karachiclub.fitness/bmi-calculator.html</loc>
+        <loc>https://karachiclub.fitness/bmi-calculator</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
-        <loc>https://karachiclub.fitness/gallery.html</loc>
+        <loc>https://karachiclub.fitness/gallery</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
-        <loc>https://karachiclub.fitness/contact.html</loc>
+        <loc>https://karachiclub.fitness/ladies</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://karachiclub.fitness/contact</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <url>
-        <loc>https://karachiclub.fitness/blog.html</loc>
+        <loc>https://karachiclub.fitness/blog</loc>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
     </url>
